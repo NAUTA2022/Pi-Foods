@@ -1,0 +1,45 @@
+.landing{
+    background-image: url('../icons/landing2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+}
+
+.wlc{
+    color: rgba( 217, 173, 142, 0.7 );
+
+    position:relative;
+    font-size: 115px;
+
+    background: rgba( 75, 49, 29, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-style: none;
+}
+
+.btn {
+    cursor: pointer;
+    background: rgba( 75, 49, 29, 0.7 );
+   
+    border-radius: 15px;
+    border-style: none;
+    font-style: italic;
+
+    color: rgba( 217, 173, 142, 0.7 );
+    font-size: 23px;
+    padding: 9px 23px 9px 23px;
+    text-decoration: none;
+    position:relative;
+    margin-top: 5%;
+  }
+  
+  .btn:hover {
+    transform: scale(1.04);
+    transition: all 1.5s;
+  }
