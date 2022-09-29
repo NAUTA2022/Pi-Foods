@@ -19,10 +19,10 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     spoonacularScore : {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     healthScore : {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     analyzedInstructions:{
       type : DataTypes.TEXT,

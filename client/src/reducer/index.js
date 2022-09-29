@@ -63,19 +63,19 @@ function rootReducer (state=initialState, action) {
         case 'ORDER_BY_PUNTUATION' : 
         let orderpunt = action.payload === 'menormayor' ? 
             state.recipes.sort(function(a,b) {
-                if(a.spoonacularScore > b.spoonacularScore) {
+                if(a.healthScore > b.healthScore) {
                     return 1
                 }
-                if( b.spoonacularScore > a.spoonacularScore){
+                if( b.healthScore > a.healthScore){
                     return -1
                 }
                 return 0
             }) : 
             state.recipes.sort(function(a,b) {
-                if(a.spoonacularScore > b.spoonacularScore) {
+                if(a.healthScore > b.healthScore) {
                     return -1
                 }
-                if( b.spoonacularScore > a.spoonacularScore){
+                if( b.healthScore > a.healthScore){
                     return 1
                 }
                 return 0

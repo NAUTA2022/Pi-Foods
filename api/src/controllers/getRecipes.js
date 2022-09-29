@@ -88,7 +88,7 @@ async function getAallRecipes(req, res) {
           },                                          // %${query}% --> el % va en los dos lados para decir que lo contenga   
           include : {
             model : TypeDiet,
-            attributes : ['name'],                   // hago que en la respuesta , tambien me traiga el tiop de dieta
+            attributes : ['name'],                   // hago que en la respuesta , tambien me traiga el tipo de dieta
             through: {
                 attributes:[]
             }
@@ -97,7 +97,7 @@ async function getAallRecipes(req, res) {
   
         const respuesta = await Promise.all(recipeBD.concat(recipeApi)) // una vez que terminan todas la promesas , concateno las dos informaciones
         console.log(respuesta.length);
-        if(respuesta.length===0) res.send(await getAllRecipes()) // si no matcheo ninguna de las dos, es decir que no esxiste el nombre que me pasaron lor query
+        if(respuesta.length===0) res.send(await getAllRecipes()) // si no matcheo ninguna de las dos, es decir que no esxiste el nombre que me pasaron por query
         return res.send(respuesta)  ; // hago que devuelva todas las recetas
   
       } catch(err) {

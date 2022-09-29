@@ -2,32 +2,46 @@
     background-image: url('../icons/fondo2.jpg');
     background-repeat: repeat;
     background-size: contain;    
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .imga{
-
     height: 10cm;
     width: 10cm;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.55);    
+    border-radius: 10px;   
 }
-.type{
-    padding: 20px;
+.typea{
+    border-right: 3px solid rgba( 0, 0, 0, 0.3);
+    border-left: 3px solid rgba( 0, 0, 0, 0.3);
+    color: #ffffff99; 
+}
+.typeb{ 
+    border-bottom: 3px solid rgba( 0, 0, 0, 0.3);
+    color: #ffffff99; 
+}
+.typec{
+    color: #ffffff99; 
+}
+.typed{  
+    border-left: 3px solid rgba( 0, 0, 0, 0.3);
+    color: #ffffff99; 
+}
+.typee{
+    border-top: 3px solid rgba( 0, 0, 0, 0.3);
+    border-left: 3px solid rgba( 0, 0, 0, 0.3);
+    color: #ffffff99; 
+}
+.typef{
+    border: 3px solid rgba( 0, 0, 0, 0.3);
+    color: #ffffff99; 
     box-shadow: 0px 0px 20px 2px #402F26;
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 5px );
-
-    border-radius: 10px;
-    border: 3px solid rgba( 0, 0, 0, 0.3 );
-    color: #ffffff;
-    
 }
+
 .title{
-    margin-top: 100px;
     padding: 10px;    
     color: #ffffff98;
 
@@ -40,28 +54,104 @@
 }
 
 .btn {
-    -webkit-border-radius: 10;
-    -moz-border-radius: 10;
-    border-radius: 100px;
-    color: #000000;
+
+    color: #fff;
     font-size: 17px;
-    background: #f7eac3;
+    background: #000000;
     padding: 10px 30px 10px 30px;
-    margin-top: 10px;
+    width: 100vw;
     text-decoration: none;
+    border-style: none;
+    transition: all 1s ease;
   }
   
   .btn:hover {
-    background: #f2f2b1;
-    background-image: -webkit-linear-gradient(top, #f2f2b1, #f3ff99);
-    background-image: -moz-linear-gradient(top, #f2f2b1, #f3ff99);
-    background-image: -ms-linear-gradient(top, #f2f2b1, #f3ff99);
-    background-image: -o-linear-gradient(top, #f2f2b1, #f3ff99);
-    background-image: linear-gradient(to bottom, #f2f2b1, #f3ff99);
-    text-decoration: none;
+    background: #00000095;
     cursor: pointer;
+    transition: all 2s;
   }
 
-  .tarjetaDetalles {
-    background-color: red;
+
+.tarjetaDeDetalles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    box-shadow: 0px 0px 20px 2px #402F26;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 3px solid rgba( 0, 0, 0, 0.3 );
+    border-radius: 10px;
+}
+.TitulosDetalles {
+    color: #000;
+}
+
+.carga {
+    margin-top: 250px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+  .carga1 {
+  animation: 5s;
+  animation-name: carga1;
+}
+
+@keyframes carga1 {
+  0% {
+opacity: 100%;
   }
+
+    50% {
+opacity: 100%;
+
+  }
+
+  100% {   
+opacity: 100%;
+  }
+}
+
+  .carga2 {
+  animation: 5s;
+  animation-name: carga2;
+}
+
+@keyframes carga2 {
+  0% {
+opacity: 0%;
+  }
+
+    50% {
+opacity: 100%;
+
+  }
+
+  100% {   
+opacity: 100%;
+  }
+}
+
+  .carga3 {
+  animation: 5s;
+  animation-name: carga3;
+}
+
+@keyframes carga3 {
+  0% {
+opacity: 0%;
+  }
+
+    50% {
+opacity: 0%;
+
+  }
+
+  100% {   
+opacity: 100%;
+  }
+}

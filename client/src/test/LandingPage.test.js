@@ -5,14 +5,14 @@ import Adapter from "@wojtekmaj/enzyme-adapter-react-17"
 Enzyme.configure({adapter: new Adapter()});
 
 describe('LandingPage',()=>{
-    it("should have an title Welcome",()=>{
+    it("Debe decir Bienvenido",()=>{
         const wrapper = shallow(<LandingPage/>)
         const title = wrapper.find('div h1')
-        expect(title.text()).toBe("Welcome")
+        expect(title.text()).toBe("Bienvenido")
     })
-    it("should have a button Start",()=>{
+    it("Debe decir Empezar",()=>{
         const wrapper = shallow(<LandingPage/>)
         const button = wrapper.find('div Link button')
-        expect(button.text()).toBe("Start")
+        expect(button.text()).toBe("Entrar")
     })
 })

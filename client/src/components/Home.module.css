@@ -1,7 +1,7 @@
 .bkg{
     background-image: url('../icons/fondo3.jpg');
     background-repeat: repeat;
-    background-size: contain;    
+    background-size: absolute;    
     top: 0;
     bottom: 0;
     right: 0;
@@ -10,8 +10,8 @@
 .select{
   border-radius: 30px;
   background: linear-gradient(145deg, #3f2918, #4b311d);
-  box-shadow:  26px 26px 68px #271a0f,
-             -26px -26px 68px #654227;
+  box-shadow:  26px 10px 40px #271a0f,
+             -26px -10px 40px #654227;
              border-style: none;
 
   cursor: pointer;
@@ -28,7 +28,7 @@
     /* padding: 30px; */
     justify-content: center;
     grid-template-columns: 33% 33% 33% ;
-    margin-top: 4rem;
+    margin-top: 8rem;
 
 }
 
@@ -36,6 +36,7 @@
   display: flex;
   flex-direction: row; 
   justify-content: center;
+  margin-top: 30px;
   
 }
 
@@ -49,8 +50,8 @@
 .refresh{
   border-radius: 30px;
   background: linear-gradient(145deg, #3f2918, #4b311d);
-  box-shadow:  26px 26px 68px #271a0f,
-             -26px -26px 68px #654227;
+  box-shadow:  26px 10px 40px #271a0f,
+             -26px -10px 40px #654227;
              border-style: none;
 
   font-size: 15px;
@@ -63,8 +64,8 @@
 .input{
   border-radius: 30px;
   background: #4b311d;
-  box-shadow: inset 50px 50px 100px #291b10,
-              inset -50px -50px 100px #6d472a;
+  box-shadow: inset 50px 50px 30px #291b10,
+              inset -50px -50px 30px #6d472a;
   border-style: none;
 
   padding: 10px;
@@ -74,8 +75,8 @@
 .create{
   border-radius: 30px;
   background: linear-gradient(145deg, #3f2918, #4b311d);
-  box-shadow:  26px 26px 68px #271a0f,
-             -26px -26px 68px #654227;
+  box-shadow:  26px 10px 40px #271a0f,
+             -26px -10px 40px #654227;
   border-style: none;
   text-decoration: none;
   padding: 5px;
@@ -91,7 +92,7 @@
 }
 .btnsearch {
   border-radius: 30px;
-  background: #83615A;
+  background-color: #83615A;
   box-shadow: inset 50px 50px 100px #291b10,
               inset -50px -50px 100px #6d472a;
   border-style: none;
@@ -103,3 +104,85 @@
   color: #fff;
 }
 
+.filtrus {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  flex-direction: column;
+  margin-top: -128px;
+  width: 100vw;
+  height: 8rem;
+  background: linear-gradient(145deg, #3f2918, #4b311d);
+  box-shadow:  20px 10px 40px #271a0f,
+             -20px -06px 40px #654227;
+             border-style: none;
+}
+
+.carga {
+    margin-top: 250px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+  .carga1 {
+  animation: 10s;
+  animation-name: carga1;
+}
+
+@keyframes carga1 {
+  0% {
+opacity: 100%;
+  }
+
+    50% {
+opacity: 100%;
+
+  }
+
+  100% {   
+opacity: 100%;
+  }
+}
+
+  .carga2 {
+  animation: 10s;
+  animation-name: carga2;
+}
+
+@keyframes carga2 {
+  0% {
+opacity: 0%;
+  }
+
+    50% {
+opacity: 100%;
+
+  }
+
+  100% {   
+opacity: 100%;
+  }
+}
+
+  .carga3 {
+  animation: 10s;
+  animation-name: carga3;
+}
+
+@keyframes carga3 {
+  0% {
+opacity: 0%;
+  }
+
+    50% {
+opacity: 0%;
+
+  }
+
+  75% {   
+opacity: 100%;
+  }
+}

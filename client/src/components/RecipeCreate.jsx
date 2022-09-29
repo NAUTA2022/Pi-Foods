@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {getTypeDiets , postRecipes} from '../actions/index';
 import { useDispatch, useSelector } from "react-redux";
 import styles from './RecipeCreate.module.css'
+
 function controlForm (input){
     const reg = new RegExp('^[0-9]+$');
     let errors = {}
@@ -64,7 +65,7 @@ function handleDelete(e){
     setInput({
         ...input,
         typeDiets: input.typeDiets.filter(diet => diet !== e )
-    }) //este es para borrar algun tipe diet que haya elegido, va a creat un nuevo array con todos los que no sean
+    }) //este es para borrar algun tipe diet que haya elegido, va a crear un nuevo array con todos los que no sean
 }//    el elemento que le hice click
 
     return (

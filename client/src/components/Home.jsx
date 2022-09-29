@@ -66,7 +66,13 @@ function handleInputName (e){
 
 
 return (
+
+    <div>
+     { 
+       allRecipes.length > 0 ? 
+
     <div className={styles.bkg}>
+    <div className={styles.filtrus}>
     <div className={styles.search}>
      <form onSubmit={(e) => {handleSubmit(e)}}> {/* este es para hacer enter y que funcione */}
      
@@ -89,7 +95,7 @@ return (
                 </select>
                 </div>
                 <div>
-                <select  onChange={e => handlePuntuation(e)} className={styles.select}>
+                <select onChange={e => handlePuntuation(e)} className={styles.select}>
                     <option value="mayormenor">Mayor nivel saludable🍏</option>
                     <option value="menormayor">Menor nivel saludable🍔</option>
                 </select>
@@ -109,7 +115,16 @@ return (
                     <option value="whole 30">Whole 30</option>
                 </select>
                 </div>
+
      </div>    
+               <div className={styles.paginado}> 
+            <Paginado
+            recipesPerPage = {recipesPerPage}
+            allRecipes = {allRecipes.length}
+            paginado= {paginado}
+            />
+            </div>  
+     </div>
 
         <div className={styles.cards}>
             { 
@@ -118,7 +133,6 @@ return (
                     
                     <Link to={'/recipes/' + e.id}>
                     <Card title={e.title} img={e.img} 
-                    // typeDiet ={e.typeDiet} 
                     typeDiets={e.typeDiets} 
                     key={e.id}/>
                     </Link>
@@ -127,14 +141,12 @@ return (
                 })      
             }    
             </div>
-            {/* <input type='text' value='value' placeholder='buscar receta' name=''>seasrchbar</input>          */}
-          <div className={styles.paginado}> 
-            <Paginado
-            recipesPerPage = {recipesPerPage}
-            allRecipes = {allRecipes.length}
-            paginado= {paginado}
-            />
-            </div>   
+
+ 
+    </div> 
+    :
+    <div className={styles.carga}> <h2 className={styles.carga1}> 🍔 </h2> <h2 className={styles.carga2}> 🍔 </h2> <h2 className={styles.carga3}> 🍔 </h2> </div>
+    }
     </div>
 )
 }
